@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Personal Portfolio </title>
+    <link rel="stylesheet" href="stylesss.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="main">  
+            <ul>
+                <li class="active">
+                <li> <a href="index.html"><i class="fa fa-home"></i></a></li>
+                <li> <a href="me.html"><i class="fa fa-user"></i></a> </li>
+                <li> <a href="portfolio.html"><i class="fa fa-folder-open"></i></a> </li>
+                <li> <a href="contact.html"><i class="fa fa-envelope"></i></a> </li>
+            <ul>
+         </div>
+         <div class="title">
+            <h2> Reconnect </h2>
+            <br>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="body">
+        <ol>
+            <li><h3>Get In Touch</h3></li><br>
+        <li><p> <i class="fa fa-envelope-o"></i>  cjenreal@gmail.com </p></li>
+            <br>
+        <li><p><a href="https://web.facebook.com/profile.php?id=100066915527084"><i class="fa fa-facebook-official"></i></a>  Czyra Jenreal Faustino Yonting</p></li>
+            <br>
+        <li><p><a href="https://www.instagram.com/zirasup/"><i class="fa fa-instagram"></i></a>  zirasup</p></li>
+        </ol>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>Send Me A Message</h3>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="email" placeholder="Email Address" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+     <div class="footer">
+        <br>
+        <br>
+        <br>
+        <ul>
+            <li><img src="pictures/k.png"></li>
+            </li><img src="pictures/kk.png"></li>                
+            </li><img src="pictures/kkk.png"></li>
+            </li><img src="pictures/kenma.png"></li>
+            </li><img src="pictures/koz.png"></li>
+            <li><img src="pictures/ke.png"></li>
+            </li><img src="pictures/ken.png"></li>                
+            </li><img src="pictures/kenm.png"></li>
+            </li><img src="pictures/kozu.png"></li>
+            </li><img src="pictures/kozum.png"></li>
+            </li><img src="pictures/kozume.png"></li>
+            </li><img src="pictures/ca.png"></li>
+            </li><img src="pictures/cat.png"></li>
+            </li><img src="pictures/a.png"></li>
+            </li><img src="pictures/t.png"></li>
+        </ul>
+     </div>
+     <scrpit src="https://smtpjs.com/v3/smtp.js"></scrpit>
+    <script>
+        function sendEmail(){
+            Email.send({
+                SecureToken: "d252fe33-e027-4ed3-832f-bd2df528bf3a",
+                
+                To : 'cjenreal@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Enqiry",
+                Body : "Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone Number: " + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert("Successfully Sent the Message.")
+            );
+            }
+    </script>
+</body>
+</html>
